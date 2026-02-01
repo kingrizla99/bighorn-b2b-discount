@@ -1,0 +1,19 @@
+# Shopify App Configuration
+# BIGHORN B2B Aggregate Discount Function
+
+name = "BIGHORN B2B Aggregate Discount"
+client_id = "69f76e8705713958b7458743bdeb07ca"
+application_url = "https://localhost:3000"
+embedded = false
+
+[access_scopes]
+scopes = "read_products,read_customers,read_discounts,write_discounts"
+
+[auth]
+redirect_urls = ["https://localhost/callback"]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false

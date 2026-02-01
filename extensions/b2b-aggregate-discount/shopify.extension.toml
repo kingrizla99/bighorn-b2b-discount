@@ -1,0 +1,24 @@
+# Extension Configuration for B2B Aggregate Discount Function
+
+api_version = "2024-10"
+
+[[extensions]]
+name = "B2B Mixed Case Discount"
+handle = "b2b-mixed-case-discount"
+type = "function"
+
+[[extensions.targeting]]
+target = "purchase.product-discount.run"
+input_query = "src/run.graphql"
+export = "run"
+
+[extensions.build]
+command = "npm run build"
+path = "dist/function.wasm"
+
+[extensions.ui]
+enable_create = true
+
+[extensions.ui.paths]
+create = "/"
+details = "/"

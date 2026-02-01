@@ -1,0 +1,39 @@
+query RunInput {
+  cart {
+    buyerIdentity {
+      purchasingCompany {
+        company {
+          id
+          name
+        }
+        location {
+          id
+          name
+          catalog {
+            id
+            title
+          }
+        }
+      }
+    }
+    lines {
+      id
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          id
+          product {
+            id
+            title
+            hasAnyTag(tags: ["15pack"])
+          }
+        }
+      }
+    }
+  }
+  shop {
+    metafield(namespace: "b2b_discount", key: "tier_config") {
+      value
+    }
+  }
+}

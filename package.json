@@ -1,0 +1,15 @@
+{
+  "name": "bighorn-b2b-discount",
+  "version": "1.0.0",
+  "description": "BIGHORN B2B Aggregate Discount App",
+  "private": true,
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "deploy": "shopify app deploy"
+  },
+  "dependencies": {
+    "@shopify/cli": "^3.50.0"
+  }
+}
