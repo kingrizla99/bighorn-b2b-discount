@@ -19,6 +19,12 @@ query RunInput {
     lines {
       id
       quantity
+      cost {
+        amountPerQuantity {
+          amount
+          currencyCode
+        }
+      }
       merchandise {
         ... on ProductVariant {
           id
@@ -27,12 +33,15 @@ query RunInput {
             title
             hasAnyTag(tags: ["15pack"])
           }
+          listPriceMetafield: metafield(namespace: "b2b_pricing", key: "list_price") {
+            value
+          }
         }
       }
     }
   }
   shop {
-    metafield(namespace: "b2b_discount", key: "tier_config") {
+    tierConfigMetafield: metafield(namespace: "b2b_discount", key: "tier_config") {
       value
     }
   }

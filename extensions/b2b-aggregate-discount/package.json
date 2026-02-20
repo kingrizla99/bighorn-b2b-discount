@@ -1,14 +1,16 @@
 {
   "name": "b2b-aggregate-discount",
   "version": "1.0.0",
-  "description": "BIGHORN B2B Aggregate Discount Function - Applies volume discounts based on total cart quantity",
+  "description": "BIGHORN B2B Aggregate Discount Function",
   "type": "module",
   "scripts": {
-    "build": "javy compile src/run.js -o dist/function.wasm",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "build": "shopify app function build",
+    "typegen": "shopify app function typegen"
+  },
+  "dependencies": {
+    "@shopify/shopify_function": "^1.0.0"
   },
   "devDependencies": {
-    "@shopify/shopify-app-remix": "^2.0.0",
-    "jest": "^29.0.0"
+    "@shopify/cli": "^3.50.0"
   }
 }

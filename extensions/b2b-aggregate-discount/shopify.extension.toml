@@ -3,8 +3,8 @@
 api_version = "2024-10"
 
 [[extensions]]
-name = "B2B Mixed Case Discount"
-handle = "b2b-mixed-case-discount"
+name = "B2B Aggregate Discount"
+handle = "b2b-aggregate-discount"
 type = "function"
 
 [[extensions.targeting]]
@@ -14,11 +14,6 @@ export = "run"
 
 [extensions.build]
 command = "npm run build"
-path = "dist/function.wasm"
 
 [extensions.ui]
 enable_create = true
-
-[extensions.ui.paths]
-create = "/"
-details = "/"
