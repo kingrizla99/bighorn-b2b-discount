@@ -1,21 +1,5 @@
 query RunInput {
   cart {
-    buyerIdentity {
-      purchasingCompany {
-        company {
-          id
-          name
-        }
-        location {
-          id
-          name
-          catalog {
-            id
-            title
-          }
-        }
-      }
-    }
     lines {
       id
       quantity
